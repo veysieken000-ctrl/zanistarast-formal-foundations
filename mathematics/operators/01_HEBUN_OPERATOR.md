@@ -1,171 +1,200 @@
 # Hebûn Operator
-Version 1.0
+
+Version 2.0
 
 ---
 
-# Purpose
+## Purpose
 
-The Hebûn Operator is the fundamental ontological operator of the
-Zanistarast Formal Foundations.
-
-Its role is to determine whether an entity satisfies the minimum
-requirements for ontological existence.
-
-All higher-level operators depend on the output of Hebûn.
+Formal ontological consistency operator.
 
 ---
 
-# Definition
+## 1. Mathematical Definition
 
-The Hebûn Operator is a mapping
-
-ℍ : Ω → Ω
-
-that evaluates the ontological integrity of a system state.
-
----
-
-# Domain
-
-Ω
-
-Global Operator Space
-
----
-
-# Codomain
-
-Ω
-
----
-
-# Input
-
-Ψ
-
-System State
-
----
-
-# Output
-
-ℍ(Ψ)
-
-returns
-
-Existence Score
-
-0 ≤ ℍ(Ψ) ≤ 1
-
----
-
-# Interpretation
-
-ℍ(Ψ)=1
-
-Fully consistent ontological state.
-
----
-
-ℍ(Ψ)=0
-
-Ontological failure.
-
----
-
-0<ℍ(Ψ)<1
-
-Partially consistent state requiring further evaluation.
-
----
-
-# Mathematical Representation
-
-Let
-
-I(Ψ)
-
-be the identity consistency,
-
-C(Ψ)
-
-the internal consistency,
-
-P(Ψ)
-
-the persistence over time.
-
-Then
-
-ℍ(Ψ)=f(I,C,P)
+ℍ : Ω → [0,1]
 
 where
 
-f
+Ω
 
-is monotonic in each argument.
+is the global state space.
 
-One possible normalized realization is
+---
 
-ℍ(Ψ)=w₁I+w₂C+w₃P
+## 2. Domain
+
+State Space
+
+Σ
+
+---
+
+## 3. Codomain
+
+Ontological Consistency Score
+
+[0,1]
+
+---
+
+## 4. Inputs
+
+Current state
+
+Relations
+
+Time
+
+Constraints
+
+---
+
+## 5. Outputs
+
+Consistency Score
+
+Validity State
+
+Constraint Report
+
+---
+
+## 6. Mathematical Model
+
+Let
+
+Ψ
+
+be the current state.
+
+Define
+
+Identity
+
+I(Ψ)
+
+Consistency
+
+C(Ψ)
+
+Persistence
+
+P(Ψ)
+
+Integrity
+
+G(Ψ)
+
+Then
+
+ℍ(Ψ)=F(I,C,P,G)
 
 subject to
 
-w₁+w₂+w₃=1,
-
-wᵢ≥0.
-
-This weighted form is an example implementation rather than the unique definition of the operator.
+0≤ℍ≤1
 
 ---
 
-# Properties
-
-Non-negative
-
-Bounded
+## 7. Properties
 
 Deterministic
 
+Stable
+
 Composable
 
-Stable under identical input
+Continuous
+
+Monotonic
 
 ---
 
-# Dependencies
+## 8. Fixed Points
 
-00_NOTATION.md
+Ψ*
 
-01_DEFINITIONS.md
+is a fixed point iff
 
-02_SYMBOL_GLOSSARY.md
+ℍ(Ψ*)=Ψ*
 
-SET_THEORY.md
-
-LOGIC.md
-
-ALGEBRA.md
-
-00_OPERATOR_SPACE.md
+or, if ℍ is score-valued, the associated state transformation induced by ℍ leaves Ψ* unchanged.
 
 ---
 
-# Future Work
+## 9. Stability
 
-Hebûn Algebra
+For bounded perturbation
 
-Hebûn Fixed Points
+δ
 
-Hebûn Stability
+the output variation satisfies
 
-Hebûn Spectral Analysis
+‖ℍ(Ψ+δ)-ℍ(Ψ)‖≤L‖δ‖
 
-Hebûn Category Representation
+for some Lipschitz constant L, if such a property is assumed.
 
 ---
 
-End of Document
+## 10. Category Representation
+
+ℍ
+
+is an endomorphism
+
+in
+
+𝒵
+
+---
+
+## 11. Systems Interpretation
+
+Hebûn evaluates
+
+Existence
+
+Identity
+
+Integrity
+
+Persistence
+
+---
+
+## 12. AI Interpretation
+
+Hebûn filters impossible or internally inconsistent states before reasoning.
+
+---
+
+## 13. Network Interpretation
+
+Invalid nodes are rejected.
+
+---
+
+## 14. Rasterast Verification
+
+Every Hebûn evaluation
+
+must satisfy
+
+ℛ
+
+---
+
+## 15. Future Work
+
+Spectral Analysis
+
+Operator Algebra
+
+Hebûn Metric
+
+Hebûn Kernel
+
+Hebûn Proof
 
 
 
