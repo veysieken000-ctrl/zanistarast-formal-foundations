@@ -1,102 +1,169 @@
-# Hebûn Operator
+# Hebûn Operator (ℍ)
 
-Version 2.0
-
----
-
-## Purpose
-
-Formal ontological consistency operator.
+Version 3.0
 
 ---
 
-## 1. Mathematical Definition
+# Purpose
 
-ℍ : Ω → [0,1]
+The Hebûn Operator (ℍ) is the primary ontological operator of the
+Zanistarast Formal Foundations.
+
+Its purpose is to evaluate whether a modeled state possesses sufficient
+ontological consistency to participate in subsequent reasoning,
+transformation and decision processes.
+
+Every valid reasoning pipeline shall begin with the Hebûn Operator.
+
+---
+
+# 1. Mathematical Signature
+
+Let
+
+Ω
+
+denote the global state space.
+
+Define
+
+ℍ : Ω → Ω × [0,1]
 
 where
 
 Ω
 
-is the global state space.
+is the transformed state
 
----
-
-## 2. Domain
-
-State Space
-
-Σ
-
----
-
-## 3. Codomain
-
-Ontological Consistency Score
+and
 
 [0,1]
 
+is the ontological consistency score.
+
+Thus
+
+ℍ(Ψ)
+
+returns
+
+(Ψ', h)
+
+where
+
+Ψ'
+
+is the validated state
+
+and
+
+h
+
+is the consistency measure.
+
 ---
 
-## 4. Inputs
+# 2. Domain
 
-Current state
-
-Relations
-
-Time
-
-Constraints
+Domain(ℍ)=Ω
 
 ---
 
-## 5. Outputs
+# 3. Codomain
 
-Consistency Score
-
-Validity State
-
-Constraint Report
+Codomain(ℍ)=Ω×[0,1]
 
 ---
 
-## 6. Mathematical Model
+# 4. Inputs
 
-Let
+Current State
 
 Ψ
 
-be the current state.
+Identity Constraints
 
-Define
+Temporal Constraints
 
-Identity
+Structural Constraints
 
-I(Ψ)
-
-Consistency
-
-C(Ψ)
-
-Persistence
-
-P(Ψ)
-
-Integrity
-
-G(Ψ)
-
-Then
-
-ℍ(Ψ)=F(I,C,P,G)
-
-subject to
-
-0≤ℍ≤1
+Logical Constraints
 
 ---
 
-## 7. Properties
+# 5. Outputs
+
+Validated State
+
+Consistency Score
+
+Validation Report
+
+---
+
+# 6. Ontological Components
+
+Let
+
+I(Ψ)
+
+Identity
+
+C(Ψ)
+
+Logical Consistency
+
+P(Ψ)
+
+Persistence
+
+G(Ψ)
+
+Structural Integrity
+
+T(Ψ)
+
+Temporal Stability
+
+---
+
+# 7. Formal Definition
+
+Define
+
+F
+
+as the Hebûn evaluation functional.
+
+Then
+
+ℍ(Ψ)=F(I,C,P,G,T)
+
+where
+
+0≤F≤1
+
+---
+
+# 8. Acceptance Criterion
+
+A state
+
+Ψ
+
+is accepted iff
+
+ℍ(Ψ)≥τ
+
+where
+
+τ
+
+is the acceptance threshold.
+
+---
+
+# 9. Algebraic Properties
 
 Deterministic
 
@@ -104,97 +171,142 @@ Stable
 
 Composable
 
-Continuous
+Monotone
 
-Monotonic
+Idempotent
 
----
-
-## 8. Fixed Points
-
-Ψ*
-
-is a fixed point iff
-
-ℍ(Ψ*)=Ψ*
-
-or, if ℍ is score-valued, the associated state transformation induced by ℍ leaves Ψ* unchanged.
+Traceable
 
 ---
 
-## 9. Stability
+# 10. Idempotence
 
-For bounded perturbation
+Applying Hebûn twice does not alter an already validated state:
 
-δ
+ℍ(ℍ(Ψ))=ℍ(Ψ)
 
-the output variation satisfies
-
-‖ℍ(Ψ+δ)-ℍ(Ψ)‖≤L‖δ‖
-
-for some Lipschitz constant L, if such a property is assumed.
+provided that no external modification has occurred.
 
 ---
 
-## 10. Category Representation
+# 11. Stability
 
-ℍ
+For bounded perturbations
 
-is an endomorphism
+δΨ
 
-in
+there exists
+
+L≥0
+
+such that
+
+‖ℍ(Ψ+δΨ)-ℍ(Ψ)‖≤L‖δΨ‖
+
+This expresses Lipschitz continuity under the adopted model assumptions.
+
+---
+
+# 12. Category-Theoretic Interpretation
+
+Within the Zanistarast Category
 
 𝒵
 
+Hebûn is modeled as an endomorphism
+
+ℍ:Ψ→Ψ
+
+acting on objects representing system states.
+
 ---
 
-## 11. Systems Interpretation
+# 13. Systems-Theoretic Interpretation
 
-Hebûn evaluates
-
-Existence
+Hebûn evaluates whether a system preserves
 
 Identity
 
-Integrity
+Internal consistency
 
-Persistence
+Temporal persistence
 
----
+Structural integrity
 
-## 12. AI Interpretation
-
-Hebûn filters impossible or internally inconsistent states before reasoning.
+before state evolution.
 
 ---
 
-## 13. Network Interpretation
+# 14. Network Interpretation
 
-Invalid nodes are rejected.
-
----
-
-## 14. Rasterast Verification
-
-Every Hebûn evaluation
-
-must satisfy
-
-ℛ
+Nodes failing Hebûn validation are excluded from trusted propagation paths.
 
 ---
 
-## 15. Future Work
+# 15. Information-Theoretic Interpretation
 
-Spectral Analysis
+Only information originating from Hebûn-valid states may enter higher reasoning layers.
 
-Operator Algebra
+---
+
+# 16. AI Interpretation
+
+Hebûn forms the first safety layer of an AI reasoning pipeline by rejecting internally inconsistent world models before inference.
+
+---
+
+# 17. Rasterast Compatibility
+
+Every Hebûn evaluation shall subsequently be checked by the Rasterast verification process.
+
+---
+
+# 18. Dependencies
+
+Primitive Concepts
+
+Notation
+
+Definitions
+
+Logic
+
+Set Theory
+
+Algebra
+
+Category Theory
+
+Systems Theory
+
+Network Theory
+
+Information Theory
+
+AI Foundations
+
+Operator Specification
+
+Operator Interface
+
+Operator Family
+
+---
+
+# 19. Future Research
 
 Hebûn Metric
 
 Hebûn Kernel
 
-Hebûn Proof
+Hebûn Spectral Theory
+
+Hebûn Operator Algebra
+
+Hebûn Completeness Theorem
+
+Hebûn Consistency Theorem
+
 
 
 
