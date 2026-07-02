@@ -1,0 +1,67 @@
+version: "1.0"
+
+metadata:
+
+  id: ZFS-YEK-001
+
+  status: stable
+
+principle:
+
+  name: Yek
+
+  description: >
+    Yek denotes the distinguishable uniqueness of every created entity.
+    It is a formal principle of created individuality and is distinct
+    from the Divine attribute Ehad.
+
+layers:
+
+  ontological:
+
+    description: >
+      Every created entity exists as one distinguishable whole,
+      even when composed of many parts.
+
+  mathematical:
+
+    description: >
+      Every admissible state possesses at least one invariant
+      that distinguishes it from every other admissible state.
+
+  computational:
+
+    description: >
+      No verified computational system shall treat two distinct
+      verified entities as having the same canonical identity.
+
+properties:
+
+  preserved_by:
+    - Hebun
+    - Zanabun
+    - Mabun
+    - Rabun
+    - Rasterast
+
+  machine_verifiable: true
+
+  deterministic: true
+
+relations:
+
+  compatible_with:
+    - admissibility
+    - verification
+    - invariants
+
+notes:
+
+  ehad:
+
+    description: >
+      Ehad is reserved exclusively for the Divine attribute.
+      It is outside the mathematical formalization and is not
+      modeled as an operator, state, or computational principle.
+
+
