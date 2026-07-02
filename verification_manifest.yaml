@@ -1,0 +1,72 @@
+version: "1.0"
+
+manifest:
+
+  specification:
+
+    root: spec/
+
+  implementations:
+
+    lean:
+
+      path: lean/
+
+      status: complete
+
+    coq:
+
+      path: coq/
+
+      status: complete
+
+    isabelle:
+
+      path: isabelle/
+
+      status: planned
+
+    agda:
+
+      path: agda/
+
+      status: planned
+
+  ai_native_model:
+
+    repository: zanistarast-ai-native-model
+
+    integration: planned
+
+  website:
+
+    repository: Website
+
+    integration: planned
+
+verification:
+
+  canonical_source:
+
+    - spec/
+
+  generated_targets:
+
+    - lean/
+
+    - coq/
+
+    - isabelle/
+
+    - agda/
+
+properties:
+
+  deterministic: true
+
+  reproducible: true
+
+  traceable: true
+
+
+
