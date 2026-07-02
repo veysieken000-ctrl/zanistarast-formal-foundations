@@ -1,0 +1,50 @@
+version: "1.0"
+
+primitive_types:
+
+  State:
+    description: Canonical system state
+
+  Entity:
+    description: Distinguishable created entity
+
+  Identity:
+    description: Canonical identity
+
+  Time:
+    description: Temporal dimension
+
+  Observation:
+    description: Observable information
+
+  Constraint:
+    description: Formal restriction
+
+  Objective:
+    description: Optimization objective
+
+predicates:
+
+  admissible:
+    input: State
+    output: Boolean
+
+  verified:
+    input: State
+    output: Boolean
+
+functions:
+
+  identityOf:
+    input: State
+    output: Identity
+
+  observe:
+    input: State
+    output: Observation
+
+  timeOf:
+    input: State
+    output: Time
+
+
