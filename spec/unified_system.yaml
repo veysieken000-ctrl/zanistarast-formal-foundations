@@ -1,0 +1,98 @@
+version: "1.0"
+
+metadata:
+
+  id: ZFS-US-001
+
+  status: stable
+
+zanistarast:
+
+  primitives:
+
+    source: primitives.yaml
+
+  operators:
+
+    source: operators.yaml
+
+  constraints:
+
+    source: constraints.yaml
+
+  objectives:
+
+    source: objectives.yaml
+
+  invariants:
+
+    source: invariants.yaml
+
+  yek:
+
+    source: yek.yaml
+
+execution:
+
+  canonical_pipeline:
+
+    - Hebun
+    - Zanabun
+    - Mabun
+    - Rabun
+    - Rasterast
+
+verification:
+
+  required: true
+
+  verifier: Rasterast
+
+proof_layer:
+
+  implementations:
+
+    - Lean
+
+    - Coq
+
+  future:
+
+    - IsabelleHOL
+
+    - Agda
+
+interfaces:
+
+  specification:
+
+    format: YAML
+
+  ai_native_model:
+
+    enabled: true
+
+  website:
+
+    enabled: true
+
+  ontology:
+
+    enabled: true
+
+  simulations:
+
+    enabled: true
+
+properties:
+
+  deterministic: true
+
+  composable: true
+
+  machine_verifiable: true
+
+  single_source_of_truth: true
+
+
+
