@@ -1,0 +1,54 @@
+version: "1.0"
+
+metadata:
+
+  id: ZFS-INV-001
+
+  status: stable
+
+global_invariants:
+
+  admissibility:
+
+    description: >
+      Every canonical execution preserves admissibility.
+
+  consistency:
+
+    description: >
+      Logical consistency shall never be violated.
+
+  verification:
+
+    description: >
+      Every verified state remains verifiable.
+
+  traceability:
+
+    description: >
+      Every canonical execution remains reconstructible.
+
+  determinism:
+
+    description: >
+      Equal inputs produce equal outputs.
+
+  canonical_order:
+
+    description: >
+      Operators execute only in canonical order.
+
+  feasibility:
+
+    description: >
+      Hard constraints remain satisfied.
+
+properties:
+
+  machine_verifiable: true
+
+  deterministic: true
+
+  composable: true
+
+
