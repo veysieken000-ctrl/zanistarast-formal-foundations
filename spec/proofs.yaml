@@ -1,0 +1,80 @@
+version: "1.0"
+
+metadata:
+
+  id: ZFS-PRF-001
+
+  status: stable
+
+proofs:
+
+  soundness:
+
+    theorem: soundness
+
+    implementation:
+
+      - Lean
+
+      - Coq
+
+  determinism:
+
+    theorem: determinism
+
+    implementation:
+
+      - Lean
+
+      - Coq
+
+  termination:
+
+    theorem: termination
+
+    implementation:
+
+      - Lean
+
+      - Coq
+
+  feasibility:
+
+    theorem: feasibility
+
+    implementation:
+
+      - Lean
+
+      - Coq
+
+  verification:
+
+    theorem: verification
+
+    implementation:
+
+      - Lean
+
+      - Coq
+
+  yek_preservation:
+
+    theorem: yek_preservation
+
+    implementation:
+
+      - Lean
+
+      - Coq
+
+properties:
+
+  machine_checked: true
+
+  reproducible: true
+
+  deterministic: true
+
+
+
