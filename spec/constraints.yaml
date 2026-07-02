@@ -1,0 +1,45 @@
+version: "1.0"
+
+constraints:
+
+  hard_constraints:
+    description: Constraints that must never be violated.
+    items:
+      - canonical_operator_order
+      - admissibility_requirement
+      - verification_requirement
+      - yek_preservation
+      - no_invalid_verified_state
+
+  soft_constraints:
+    description: Constraints that may be optimized but should be minimized when violated.
+    items:
+      - computational_cost
+      - resource_usage
+      - communication_cost
+      - optimization_loss
+
+  contextual_constraints:
+    description: Domain-specific constraints supplied by simulations, AI models, or applications.
+    items:
+      - domain_policy
+      - user_context
+      - simulation_boundary
+      - environment_condition
+
+satisfaction:
+
+  feasible_state:
+    definition: A state is feasible if it satisfies all hard constraints.
+
+  verified_state:
+    definition: A state is verified if it is feasible and accepted by Rasterast.
+
+properties:
+
+  constraint_consistency: required
+  machine_verifiable: true
+  canonical_order_required: true
+
+
+
