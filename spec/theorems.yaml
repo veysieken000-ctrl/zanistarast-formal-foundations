@@ -1,0 +1,54 @@
+version: "1.0"
+
+metadata:
+
+  id: ZFS-THM-001
+
+  status: stable
+
+theorems:
+
+  soundness:
+
+    description: >
+      Every admissible theorem preserves the global axioms.
+
+  determinism:
+
+    description: >
+      Equal admissible inputs always produce equal outputs.
+
+  termination:
+
+    description: >
+      Every canonical execution terminates.
+
+  feasibility:
+
+    description: >
+      Canonical execution preserves feasibility.
+
+  verification:
+
+    description: >
+      Rasterast accepts only formally verified states.
+
+  yek_preservation:
+
+    description: >
+      Canonical execution preserves distinguishable identity.
+
+  consistency:
+
+    description: >
+      No theorem contradicts any global invariant.
+
+properties:
+
+  machine_verifiable: true
+
+  deterministic: true
+
+  composable: true
+
+
