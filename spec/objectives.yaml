@@ -1,0 +1,62 @@
+version: "1.0"
+
+metadata:
+  id: ZFS-OBJ-001
+  status: stable
+
+objectives:
+
+  admissibility:
+    description: Preserve admissibility throughout execution.
+    priority: critical
+
+  verification:
+    description: Maximize formally verified states.
+    priority: critical
+
+  consistency:
+    description: Preserve logical consistency.
+    priority: high
+
+  optimization:
+    description: Optimize system resources.
+    priority: medium
+
+  explainability:
+    description: Preserve explainability of every decision.
+    priority: high
+
+  traceability:
+    description: Every decision must remain reconstructible.
+    priority: high
+
+optimization:
+
+  type: multi_objective
+
+  ordering:
+
+    - admissibility
+    - verification
+    - consistency
+    - explainability
+    - traceability
+    - optimization
+
+verified_optimum:
+
+  description: >
+    A state satisfying every hard constraint,
+    accepted by Rasterast,
+    while maximizing the objective vector.
+
+properties:
+
+  deterministic: true
+
+  machine_verifiable: true
+
+  composable: true
+
+
+
