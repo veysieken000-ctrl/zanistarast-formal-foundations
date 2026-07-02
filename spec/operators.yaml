@@ -1,0 +1,69 @@
+version: "1.0"
+
+operators:
+
+  Hebun:
+    stage: 1
+    category: Ontology
+    input: State
+    output: State
+    preserves:
+      - admissibility
+      - consistency
+
+  Zanabun:
+    stage: 2
+    category: Epistemology
+    input: State
+    output: State
+    preserves:
+      - admissibility
+      - knowledge
+
+  Mabun:
+    stage: 3
+    category: Optimization
+    input: State
+    output: State
+    preserves:
+      - admissibility
+      - balance
+
+  Rabun:
+    stage: 4
+    category: Coordination
+    input: State
+    output: State
+    preserves:
+      - admissibility
+      - governance
+
+  Rasterast:
+    stage: 5
+    category: Verification
+    input: State
+    output: State
+    preserves:
+      - admissibility
+      - verification
+      - yek
+
+pipeline:
+
+  - Hebun
+  - Zanabun
+  - Mabun
+  - Rabun
+  - Rasterast
+
+properties:
+
+  deterministic: true
+
+  composable: true
+
+  machine_verifiable: true
+
+  canonical_order: required
+
+
